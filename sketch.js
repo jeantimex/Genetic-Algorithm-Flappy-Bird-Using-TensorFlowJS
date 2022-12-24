@@ -54,7 +54,7 @@ function setup() {
   context = canvas.getContext("2d");
 
   generationSpan = document.querySelector("#generation");
-  generationSpan.textContext = generation;
+  generationSpan.textContent = generation;
 
   const sketchDiv = document.getElementById("sketch");
   sketchDiv.appendChild(canvas);
@@ -104,7 +104,7 @@ function draw() {
   }
   if (aliveBirds.length == 0) {
     generation++;
-    generationSpan.textContext = generation;
+    generationSpan.textContent = generation;
     createNextGeneration();
   }
 
